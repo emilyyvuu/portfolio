@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import ThemeToggle from "./ThemeToggle";
 
 const links = [
   { href: "/", label: "Home" },
@@ -9,17 +12,23 @@ const links = [
 
 export default function Navbar() {
   return (
-    <nav className="flex items-center justify-between py-4">
-      <Link href="/" className="font-bold text-lg">
-        Emily Vu
-      </Link>
-      <div className="flex gap-4 text-sm">
-        {links.map((link) => (
-          <Link key={link.href} href={link.href} className="hover:underline">
-            {link.label}
-          </Link>
-        ))}
-      </div>
-    </nav>
+    <header className="pt-8">
+      <nav className="pill-nav flex flex-wrap items-center gap-4">
+        <Link
+          href="/"
+          className="text-xs font-semibold uppercase tracking-[0.45em] text-[color:var(--text-muted)]"
+        >
+          Emily&nbsp;Vu
+        </Link>
+        <div className="nav-links flex-1 items-center justify-center">
+          {links.map((link) => (
+            <Link key={link.href} href={link.href}>
+              {link.label}
+            </Link>
+          ))}
+        </div>
+        <ThemeToggle />
+      </nav>
+    </header>
   );
 }
