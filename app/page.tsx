@@ -2,21 +2,27 @@ import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Home() {
   return (
-    <section className="min-h-[80vh] flex flex-col md:flex-row items-center justify-center gap-12">
+    <section className="min-h-[75vh] flex flex-col md:flex-row items-center justify-center gap-12">
       <div className="flex flex-col max-w-xl">
-        <h1 className="text-5xl font-bold mt-2">
+        <p className="text-sm uppercase tracking-[0.2em] text-slate-400">
+            Computer Science Student
+        </p>
+
+        <h1 className="text-5xl font-bold mt-3">
           Hi, I'm <span className="text-sky-400">Emily!</span>
         </h1>
 
         <p className="mt-6 text-lg text-slate-500">
-          I'm a computer science student at Virginia Tech interested in software
-          engineering. Welcome to my portfolio!
+          I'm a computer science senior at Virginia Tech interested in software
+          engineering. I enjoy building user-focused applications and learning
+          new technologies along the way. 
         </p>
-        <div className="flex gap-4 mt-6">
-          <a href="/experience" className="px-4 py-2 rounded-md bg-sky-500 text-white hover:bg-sky-600 transition">
+
+        <div className="flex gap-3 mt-6">
+          <a href="/experience" className="px-4 py-2 rounded-full bg-sky-500 text-white hover:bg-sky-600 transition">
             Experience
           </a>
-          <a href="/projects" className="px-4 py-2 rounded-md border border-sky-500 text-sky-500 hover:bg-sky-500 hover:text-white transition">
+          <a href="/projects" className="px-4 py-2 rounded-full border border-sky-500 text-sky-500 hover:bg-sky-500 hover:text-white transition">
             Projects
           </a>
         </div>
@@ -28,7 +34,6 @@ export default function Home() {
           >
             <FaGithub />
           </a>
-
           <a
             href="https://linkedin.com/in/emilybvu"
             target="_blank"
@@ -36,7 +41,6 @@ export default function Home() {
           >
             <FaLinkedin />
           </a>
-
           <a
             href="mailto:emilyvu@vt.edu"
             className="hover:text-white transition"
@@ -50,7 +54,7 @@ export default function Home() {
       <img
         src="/headshot.jpg"
         alt="Emily Vu headshot"
-        className="w-70 h-70 rounded-full object-cover shadow-lg"
+        className="w-60 h-60 rounded-full object-cover shadow-lg"
       />
     </section>
   );
