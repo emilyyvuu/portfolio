@@ -161,6 +161,32 @@ a {
   cursor: not-allowed;
 }
 
+.timeline-line {
+  border-color: var(--pill-border);
+  opacity: 0.6;
+}
+
+.timeline-dot {
+  border: 2px solid var(--background);
+  background: var(--text-muted);
+  box-shadow: 0 0 0 4px var(--background);
+  opacity: 0.45;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    opacity 0.3s ease,
+    background 0.3s ease;
+}
+
+.timeline-dot--active {
+  opacity: 1;
+  background: var(--text-primary);
+  transform: scale(1.1);
+  box-shadow:
+    0 0 0 4px var(--background),
+    0 0 12px rgba(250, 250, 250, 0.45);
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
