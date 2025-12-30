@@ -1,6 +1,6 @@
-import type { Metadata } from "next";
 import Navbar from "@/components/layout/Navbar";
 import { ThemeProvider } from "@/components/layout/ThemeProvider";
+import type { Metadata } from "next";
 import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
@@ -26,7 +26,7 @@ export default function RootLayout({
         <ThemeProvider>
           <div className="mx-auto min-h-screen w-full max-w-5xl px-6 sm:px-8">
             <Navbar />
-            <main className="py-12">{children}</main>
+            <main className="pb-12 pt-1">{children}</main>
           </div>
         </ThemeProvider>
       </body>
